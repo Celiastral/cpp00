@@ -5,8 +5,8 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -O2
 
 OBJS_DIR = .obj/
 SRC_DIR = srcs/
-HEADERS = include/PhoneBook.hpp
-SRCS = PhoneBook.cpp
+HEADERS = include/PhoneBook.hpp include/Contact.hpp
+SRCS = PhoneBook.cpp Contact.cpp main.cpp utils.cpp
 
 OBJS = $(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o)) 
 

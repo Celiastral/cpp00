@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eandre <eandre@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/05 14:39:01 by eandre            #+#    #+#             */
-/*   Updated: 2024/09/06 19:14:27 by eandre           ###   ########.fr       */
+/*   Created: 2024/09/06 18:52:58 by eandre            #+#    #+#             */
+/*   Updated: 2024/09/06 18:58:58 by eandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include <iostream>
+#include <cstdlib>
+#include <iomanip>
 
-class Phonebook
+typedef enum e_type
+{
+	e_first_name,
+	e_last_name,
+	e_nickname,
+	e_phone_nbr,
+	e_secret
+}	t_type;
+
+class Contact
 {
 	public :
-		Phonebook();
-		int		print_search_contact();
-		int		set_contact();
+		std::string	get_value(int type);
+		int			is_valid();
+		void		set_value(int type, std::string value);
 	private :
-		int		get_contact_value();
-		void	print_contact_value(int index);
-		int		index;
-		Contact	contact[8];
+		std::string first_name;
+		std::string last_name;
+		std::string nickname;
+		std::string phone_nbr;
+		std::string secret;
+
 };
-
-/*					//UTILS\\							*/
-
-int		is_number(std::string str);
-void	print_search_upper_tab();
