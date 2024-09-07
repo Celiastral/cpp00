@@ -6,7 +6,7 @@
 /*   By: eandre <eandre@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 14:24:10 by eandre            #+#    #+#             */
-/*   Updated: 2024/09/06 19:20:28 by eandre           ###   ########.fr       */
+/*   Updated: 2024/09/07 13:00:59 by eandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int	Phonebook::get_contact_value()
 			std::cout << "\033[0;31mYou need to tell the index number!\033[0m" << std::endl;
 		if (!value.empty())
 		{
+			if (value == "BACK")
+				return (0);
 			if (is_number(value) == 1)
 				std::cout << "\033[0;31mThe value needs to be a number!\033[0m" << std::endl;
 			else
@@ -144,13 +146,16 @@ int	Phonebook::print_search_contact()
 			while (type < 3)
 			{
 				std::cout << "|";
-				if (Phonebook::contact[i].get_value(type).length() > 9)
+				if (Phonebook::contact[i].get_value(type).length() > 10)
+				{
 					std::cout << std::setw(9);
+					std::cout << Phonebook::contact[i].get_value(type).substr(0, 9) << ".";
+				}
 				else
+				{
 					std::cout << std::setw(10);
-				std::cout << Phonebook::contact[i].get_value(type).substr(0, 9);
-				if (Phonebook::contact[i].get_value(type).length() > 9)
-					std::cout << ".";
+					std::cout << Phonebook::contact[i].get_value(type).substr(0, 10);
+				}
 				type++;
 			}
 			std::cout << "|" << std::endl;

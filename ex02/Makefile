@@ -24,10 +24,10 @@ test: $(NAME)
 	@rm -f our_logs their_logs
 
 $(NAME) : $(OBJS)
-	@echo -n "$(Red)Compilation de discord beta ..${NC}" && sleep 0.2
-	@echo -n "$(Red)\rCompilation de discord beta ...${NC}"
+	@echo -n "$(Red)Compilation de Account ..${NC}" && sleep 0.2
+	@echo -n "$(Red)\rCompilation de Account ...${NC}"
 	$(C++) $^ $(CPPFLAGS) -o $(NAME) && sleep 0.1
-	@echo "$(Green)\r------Compilation de discord beta finie !-------${NC}"
+	@echo "$(Green)\r------Compilation de Account finie !-------${NC}"
 
 $(OBJS_DIR)%.o : $(SRC_DIR)%.cpp Makefile $(HEADERS)
 	$(C++) $(CPPFLAGS) -c $< -o $@

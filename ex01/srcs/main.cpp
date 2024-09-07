@@ -6,7 +6,7 @@
 /*   By: eandre <eandre@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 18:58:13 by eandre            #+#    #+#             */
-/*   Updated: 2024/09/06 19:09:17 by eandre           ###   ########.fr       */
+/*   Updated: 2024/09/07 12:55:37 by eandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int	main(int argc, char **argv)
 	{
 		std::cout << "\033[0;35mDiscord~\033[0m";
 		if (!std::getline(std::cin, command))
-				return (std::cout << std::endl, 1);
+				return (std::cout << std::endl << "\033[0;31mExited with ctrl+d\033[0m" << std::endl, 1);
 		if (command == "ADD")
 			if (Phonebook.set_contact() == 1)
-				return (std::cout << std::endl, 1);
+				return (std::cout << std::endl << "\033[0;31mExited with ctrl+d\033[0m" << std::endl, 1);
 		if (command == "SEARCH")
 			if (Phonebook.print_search_contact() == 1)
-				return (std::cout << std::endl, 1);
+				return (std::cout << std::endl << "\033[0;31mExited with ctrl+d\033[0m" << std::endl, 1);
 		if (command == "NITRO")
 			std::cout << "\033[1;32mONLY 9.99 PER MONTH🗣️ 💯🗣️ 💯\033[0m"<< std::endl;
 		if (command == "EXIT")
