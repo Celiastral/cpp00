@@ -6,9 +6,12 @@
 /*   By: eandre <eandre@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 18:52:58 by eandre            #+#    #+#             */
-/*   Updated: 2024/09/06 18:58:58 by eandre           ###   ########.fr       */
+/*   Updated: 2024/09/07 13:53:43 by eandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 #include <iostream>
 #include <cstdlib>
@@ -37,3 +40,5 @@ class Contact
 		std::string secret;
 
 };
+
+#endif

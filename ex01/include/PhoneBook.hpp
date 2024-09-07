@@ -6,9 +6,12 @@
 /*   By: eandre <eandre@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 14:39:01 by eandre            #+#    #+#             */
-/*   Updated: 2024/09/06 19:14:27 by eandre           ###   ########.fr       */
+/*   Updated: 2024/09/07 13:54:48 by eandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
 #include "Contact.hpp"
 
@@ -29,3 +32,5 @@ class Phonebook
 
 int		is_number(std::string str);
 void	print_search_upper_tab();
+
+#endif
