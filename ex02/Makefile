@@ -69,7 +69,7 @@ sus:
 	@echo "$(White)         ░▀▀█░█░█░▀▀█$(NC)"
 	@echo "$(White)         ░▀▀▀░▀▀▀░▀▀▀$(NC)"
 
-.PHONY : all clean fclean re obj print-% sus
+.PHONY : all clean fclean re obj test print-% sus
 
 # COLORS =======================================================================
 
